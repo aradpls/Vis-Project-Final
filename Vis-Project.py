@@ -21,7 +21,7 @@ import plotly.express as px
 import dash
 from dash import Dash, dcc, html, Input, Output
 from IPython.display import clear_output
-
+from flask import Flask
 
 
 
@@ -47,8 +47,8 @@ for column in data4.columns[1:]:
     except ValueError:
         pass  # Handle non-numeric values here, for example setting them to NaN
 
-app = Dash(__name__)
-
+app = Flask(__name__)
+app= app.server
 # Available years in the dataset for selection
 years = [str(year) for year in range(1948, 2022)]  # Adjust based on your dataset
 
@@ -101,6 +101,7 @@ def update_graph(selected_year):
 
 
 #run the app
+
 if __name__ == '__main__':
     app.run_server()
 
