@@ -19,7 +19,7 @@ import seaborn as sns
 import numpy as np
 import plotly.express as px
 import dash
-from dash import dcc, html, Input, Output
+from dash import Dash, dcc, html, Input, Output
 from IPython.display import clear_output
 from dash import html, dcc
 import dash_core_components as dcc
