@@ -18,7 +18,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import plotly.express as px
-import bar_chart_race as bcr #run only if you have ffmpeg on ur computer
 import dash
 from dash import dcc, html, Input, Output
 from IPython.display import clear_output
