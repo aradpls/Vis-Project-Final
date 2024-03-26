@@ -3,32 +3,11 @@
 
 # In[1]:
 
-
-get_ipython().system('pip install bar_chart_race#')
-
-
-# In[2]:
-
-
-get_ipython().system('pip install plotly#')
-
-
-# In[3]:
-
-
-get_ipython().system('pip install dash#')
-
-
-# In[4]:
-
-
 #conetcting to pltoly for intractve grhaps
 import plotly.offline as pyo
 pyo.init_notebook_mode(connected=True)
 
-
 # In[5]:
-
 
 #importing important libraries to use for visualization
 import pandas as pd
@@ -55,94 +34,9 @@ import dash_html_components as html
 #if you will run the code you will need to take the data and uplaod it the jupiter
 data = pd.read_csv("NamesE.csv")
 
-
-# In[7]:
-
-
-#Race Bar chart
-#Data filtering for creating race barchart/ we saprater it because we have two videos one for male 
-#and one for female
-'''
-datavid = data.copy()
-#filter men names
-male_data = datavid[datavid['Gender'] == 'Male']
-#filter women names
-female_data = datavid[datavid['Gender'] == 'Female']
-#delete erelvent columbs for race bar cahr activition
-columns_to_delete = ["SumYears", "Firstname", "Gender", "Religion"]
-male_data_cleaned = male_data.drop(columns=columns_to_delete, errors='ignore')
-female_data_cleaned = female_data.drop(columns=columns_to_delete, errors='ignore')
-
-'''
-
-
-# In[8]:
-
-
-#creating race bar chart for man names
-#only run on ur computer if you have ffmpeg if not run it on google collab and it will work with mp4
-#the video is on you tube on my channel
-'''
-male_data_cleaned.replace({'.': 0, '..': 0}, inplace=True) #orgenzing data for counts
-male_data_cleaned.fillna(0, inplace=True)
-for column in male_data_cleaned.columns[1:]:
-    male_data_cleaned[column] = male_data_cleaned[column].apply(lambda x: int(str(x).replace(',', '').replace('.', '0')))
-
-# Set the names column as the index and transpose the data
-male_data_cleaned.set_index("Firstup",inplace=True)
-data_transposed = male_data_cleaned.transpose()
-
-# Convert data to cumulative
-data_cumulative = data_transposed.cumsum()
-
-# Generate bar chart race and orginize lables,speed,amount of bars
-bcr.bar_chart_race(
-    df=data_cumulative,
-    filename='names_bar_chart_raceM.mp4',
-    n_bars=10,
-    steps_per_period=25,  # Increase this value to slow down the animation
-    title='Man Top 10 Names Over Time (1948-2021)',
-    bar_label_size=7,
-    tick_label_size=7
-)
-'''
-
-
-# In[9]:
-
-
 #creating race bar chart for women names
 #only run on ur computer if you have ffmpeg if not run it on google collab and it will work witg mp4
 #the video is on you tube on my channel
-
-'''
-female_data_cleaned.replace({'.': 0, '..': 0}, inplace=True) #orgenzing data for counts
-female_data_cleaned.fillna(0, inplace=True)
-for column in female_data_cleaned.columns[1:]:
-    female_data_cleaned[column] = female_data_cleaned[column].apply(lambda x: int(str(x).replace(',', '').replace('.', '0')))
-
-# Set the names column as the index and transpose the data
-female_data_cleaned.set_index("Firstup",inplace=True)
-data_transposed2 = female_data_cleaned.transpose()
-
-# Convert data to cumulative
-data_cumulative2 = data_transposed2.cumsum()
-
-# Generate bar chart race and orginize lables,speed,amount of bars
-bcr.bar_chart_race(
-    df=data_cumulative2,
-    filename='names_bar_chart_raceF.mp4',
-    n_bars=10,
-    steps_per_period=25,  # Increase this value to slow down the animation
-    title='Women Top 10 Names Over Time (1948-2021)',
-    bar_label_size=7,
-    tick_label_size=7
-)
-'''
-
-
-# In[10]:
-
 
 #top 10 names in each year boys/girls
 # copying the data
