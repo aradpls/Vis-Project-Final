@@ -156,7 +156,7 @@ for column in data4.columns[1:]:
         pass  # Handle non-numeric values here, for example setting them to NaN
 
 app = dash.Dash(__name__)
-
+app = app.sever
 # Available years in the dataset for selection
 years = [str(year) for year in range(1948, 2022)]  # Adjust based on your dataset
 
