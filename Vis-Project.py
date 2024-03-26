@@ -47,7 +47,7 @@ for column in data4.columns[1:]:
     except ValueError:
         pass  # Handle non-numeric values here, for example setting them to NaN
 
-app = Flask(__name__)
+app = dash.Dash(__name__)
 # Available years in the dataset for selection
 years = [str(year) for year in range(1948, 2022)]  # Adjust based on your dataset
 
