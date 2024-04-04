@@ -16,4 +16,4 @@ To activate the note book in google collab you need to: press Runtime --> Run Al
 
 ![image](https://github.com/aradpls/Vis-Project-Final/assets/163511154/94e481d0-fe7a-4606-8b3d-541b93937b2f)
 
-Basically, the Plotly library makes all graphs interactive by default, so it is important to us that you will run the google collab notebook. so that you will be able to see all the graphs that appeared in the work (pdf file)
+Basically, the Plotly library makes all graphs interactive by default, so it is important to us that you will run the google collab notebook. so that you will be able to see all the graphs that appeared in the work (pdf file).
