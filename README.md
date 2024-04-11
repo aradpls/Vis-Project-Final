@@ -1,4 +1,4 @@
-<h1 align="center">Visualization project </h1>
+<h1 align="center">Visualization Project </h1>
 
 This is our project for Visualizations of information using Names data.
 
