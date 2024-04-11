@@ -1,3 +1,5 @@
+<h1 align="center">Visualization project </h1>
+
 This is our project for Visualizations of information using Names data.
 
 names: Adi Yogev Gulbari and Arad Peleg
